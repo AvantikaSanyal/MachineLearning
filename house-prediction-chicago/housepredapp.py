@@ -3,7 +3,8 @@ import pandas as pd
 import joblib
 
 # Load trained pipeline
-model = joblib.load("model.pkl")
+import os
+model = joblib.load(os.path.join(os.path.dirname(__file__), "model.pkl"))
 
 st.title("🏠 House Price Predictor")
 
